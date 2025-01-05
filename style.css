@@ -1,0 +1,136 @@
+*{
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px; /* Space between boxes */
+    width: 400px; /* Total width of the grid */
+    margin: 20px auto; /* Center the grid */
+}
+.btn {
+    width: 160px;
+    height: 160px;
+    margin-top: 10px;
+    background-color: lightblue;
+    border: 5px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.yellow{
+    background-color: #f99b45;
+}
+
+.red{
+    background-color: #d95980;
+}
+.purple{
+    background-color: #819ff9;
+}
+.green{
+    background-color: #63aac0;
+}
+
+.flash{
+    background-color: white;
+}
+
+.userFlash{
+    background-color: rgb(236, 221, 136);
+}
+
+.wrong{
+    background-color: red;
+}
+
+/* *********************************************new and enhanced code**************************************** */
+/* Add this code separately for enhanced gaming visuals */
+body {
+    background: linear-gradient(135deg, #1c1c3c, #3c3c8c, #1c1c3c);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Flash and user interactions */
+.flash {
+    animation: flashAnimation 0.2s ease-in-out;
+}
+
+.userFlash {
+    animation: userFlashAnimation 0.3s ease-in-out;
+}
+
+.wrong {
+    animation: wrongAnimation 0.3s ease-in-out;
+}
+
+/* Key animations */
+@keyframes flashAnimation {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: initial;
+    }
+}
+
+@keyframes userFlashAnimation {
+    0% {
+        background-color: rgb(236, 221, 136);
+    }
+    100% {
+        background-color: initial;
+    }
+}
+
+@keyframes wrongAnimation {
+    0% {
+        background-color: red;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: initial;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
